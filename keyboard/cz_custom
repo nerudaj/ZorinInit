@@ -1,0 +1,17 @@
+// Czech QWERTZ with custom AltGr mappings
+// AltGr+-  => *
+// AltGr+ý  => `
+// AltGr+š  => ^
+// AltGr+ů  => $
+
+default partial alphanumeric_keys
+xkb_symbols "qwertz_custom" {
+    include "cz(basic)"
+    name[Group1]= "Czech (QWERTZ, custom AltGr)";
+
+    key <TLDE> { [ semicolon, asciitilde, dead_abovering, asciitilde ]};
+    key <AB10> { [ minus,   underscore, asterisk,    asterisk    ] };
+    key <AE07> { [ yacute,  7,          grave,       grave       ] };
+    key <AE03> { [ scaron,  3,          asciicircum, asciicircum ] };
+    key <AC10> { [ uring,   quotedbl,   dollar,      dollar      ] };
+};

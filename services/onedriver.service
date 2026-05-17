@@ -1,0 +1,15 @@
+[Unit]
+Description=onedriver (OneDrive FUSE client)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/onedriver /home/doomista/onedrive
+Restart=on-failure
+RestartSec=5
+Environment=HOME=/home/doomista
+
+[Install]
+WantedBy=default.target
+
